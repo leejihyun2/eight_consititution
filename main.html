@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <mata name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+            <title>목체질 섭생표</title>
+    </head>
+    <body>
+        <div class="all">
+        <div class="dropdown_list">
+            <select class="list" id="category_list">
+                <option value="분류">분류</option>
+                <option value="곡류">곡류</option>
+                <option value="채소">채소</option>
+                <option value="육류">육류</option>
+                <option value="생선">생선</option>
+                <option value="해조">해조</option>
+                <option value="과일">과일</option>
+                <option value="양념">양념</option>
+                <option value="기름">기름</option>
+                <option value="음료">음료</option>
+            </select>
+            <select class="list" id="mark_list" >
+                <option value="목체질">목체질</option>
+                <option value="o">○</option>
+                <option value="△">△</option>
+                <option value="x">✕</option>
+            </select>
+        </div>
+        <div class="selected-filters" >
+            <div id="category_filters"></div>
+            <div id="mark_filters"></div>
+        </div>
+        <div class="search">
+            검색: <input type="search" id="search_input">
+        </div>
+        <div class="sorting_head">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>분류</th>
+                            <th>음식</th>
+                            <th>목체질</th>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr class="row">
+                            <td>곡류</td>
+                            <td>수수/율무/통밀/치아시드</td>
+                            <td>O</td>
+                        </tr>                   
+                        </tr>
+                        <tr class="row">
+                            <td>곡류</td>
+                            <td>메주콩(대두)/서리태/흑태</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>곡류</td>
+                            <td>녹두/보리/차조</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>곡류</td>
+                            <td>팥/메주콩/서목태</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>곡류</td>
+                            <td>찰옥수수/찹쌀/찹쌀현미</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>곡류</td>
+                            <td>찰흑미/흑미/병아리콩</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>곡류</td>
+                            <td>기장/귀리/메조/메밀</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>곡류</td>
+                            <td>백미/안남미/퀴노아/현미</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>곡류</td>
+                            <td>호밀/초당옥수수</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>곡류</td>
+                            <td>강낭콩/렌틸콩/백편두/완두콩/작두콩</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>가죽/머위/명이/박나물</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>감자/고구마/고구마줄기</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>개똥쑥/근대</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>고추/고춧잎/</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>두릅/마늘쫑</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>민들레/무순/무청/염교</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>참죽/취/콩나물</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>카사바(타피오카)/당근/콩잎</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>호박(애호박 제외)/도라지/무/마/순무</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>연근/피망</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>느타리/상황/싸리/표고버섯</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>가지/냉이</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>곤드레/구약(곤약)/다채(비타민나물)</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>땅두릎</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>바디/방풍나물</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>신선초/쑥갓/아스파라거스</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>아욱/유채/죽순/질경이</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>엉겅퀴나물/파프리카</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>고들빼기/더덕</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>씀바귀/우엉</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>영지버섯</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>갓/고사리/고수/겨자채/깻잎</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>참쑥/미나리/방아잎/브로콜리</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>푸른 잎 채소(배추/양상추/부추 등)</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>비름/세발/숙주/순채나물</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>샐러리/시금치/오이/애호박</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>짚신/돌/참나물</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>콜리플라워/토란/비트/양파</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>채소</td>
+                            <td>송이/새송이/양송이/운지버섯</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>육류</td>
+                            <td>돼지/양(가끔)</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>육류</td>
+                            <td>메추리</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>육류</td>
+                            <td>소/염소</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>육류</td>
+                            <td>버터/요구르트/우유/치즈</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>육류</td>
+                            <td>유정란/무정란(노른자)</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>육류</td>
+                            <td>칠면조/오리/닭</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>육류</td>
+                            <td>산양유</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>육류</td>
+                            <td>꿩/말</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>가오리/홍어</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>메기/미꾸라지/민물장어</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>민물조개</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>산천어</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>붕장어/성게/소라</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>꺽지/모래무지/쏘가리/우럭</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>등푸른생선</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>흰살생선</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>바다장어</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>게류/바닷가재</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>새우/조개류/굴/고리</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>미더덕/멍게/전복/해삼</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>해파리</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>낙지/문어/오징어/주꾸미</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>생선</td>
+                            <td>다슬기/붕어/잉어</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>해조</td>
+                            <td>감태/김/다시마/미역</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>해조</td>
+                            <td>대황/청각/톳</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>해조</td>
+                            <td>매생이/파래</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>해조</td>
+                            <td>우뭇가사리/한천</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>해조</td>
+                            <td>모자반</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>귤/오렌지/자몽/꾸지뽕</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>노란망고/코코넛</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>롱간/매실/살구</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>메론/수박</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>사과/배/아보카도</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>으름/자두(국산)</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>오디/크랜베리</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>땅콩/도토리/마카다미아/밤/아몬드/은행/피스타치오/호두</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>리츠/산딸기/석류</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>아로니아/아시히베리/용과/타이거너츠</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>라임/레몬/체리</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>탱자/토마토/패션푸르츠/사차인치</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>검은깨/참깨/해바라기씨</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>감/모과/복숭아/애기사과/참외</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>거봉/검정포도/머루/청포도</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>다래/딸기/체리/앵두/푸룬</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>망고스킨/바나나/애플망고/파파야</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>블랙베리/블루베리/</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>파인애플/키위</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>과일</td>
+                            <td>들깨/피칸/브라질너트/아마씨/잣/캐슈넛</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>양념</td>
+                            <td>마늘/설탕/울금/칠리소스</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>양념</td>
+                            <td>원두식초/자두식초</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>양념</td>
+                            <td>굴소스/보리조청/박하/스테비아</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>양념</td>
+                            <td>새우젓/아가베시럽/블루베리식초/아로니아식초/죽염</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>양념</td>
+                            <td>계피/고추냉이/꿀/사과식초/생강/후추</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>양념</td>
+                            <td>감식초/무화과식초/포도식초/화이트발사믹식초</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>양념</td>
+                            <td>강황/겨자</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>양념</td>
+                            <td>까나리액젓/멸치액젓/천일염/케이퍼</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>양념</td>
+                            <td>비트슈가/메이플시럽/포도당가루</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>기름</td>
+                            <td>대마유(햄프씨드)/콩식용유/호두기름/호박씨유</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>기름</td>
+                            <td>마가린/아보카도유/코코넛오일</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>기름</td>
+                            <td>옥수수유/참기름/해바라기유</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>기름</td>
+                            <td>들기름/오리기름/코코아버터</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>기름</td>
+                            <td>아마씨유/올리브유/카놀라유/포도씨유/현미유</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="row">
+                            <td>음료</td>
+                            <td>국화/매실/도라지/민들레/오미자/율무차/칡/커피</td>
+                            <td>O</td>
+                        </tr>
+                        <tr class="row">
+                            <td>음료</td>
+                            <td>녹차/보리차/복분자/홍차/페퍼민트/자스민/옥수수차</td>
+                            <td>△</td>
+                        </tr>
+                        <tr class="row">
+                            <td>음료</td>
+                            <td>다크초콜릿/둥굴레/모과/유자/카모마일/코코아</td>
+                            <td>X</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+
+    <script src="first.js"></script>
+    
+    </body>
+</html>

@@ -1,0 +1,54 @@
+.all{
+    width: 600px;
+}
+.sorting_head{
+    width: 600px;
+    height: 600px;
+    overflow-y: scroll;/*세로 스크롤지정*/
+    box-sizing: border-box;/*너비와 높이를 패딩과 보더를 포함해 계산*/
+}
+table{
+    width:100%;
+    table-layout: fixed;/*고정된 레이아웃*/
+    border-collapse: collapse;/*선 하나만 나오게*/
+}
+thead th{
+    position: sticky;/*고정*/
+    top: 0;/*상단*/
+    background: #3867d6;
+    color: #d1d8e0;               
+}
+tr,td{                
+    height: 50px;
+    box-sizing: border-box;
+}
+th:nth-child(1), td:nth-child(1) {
+    width: 30%; /* 1:2:1 비율 중 1 */
+    text-align: center;
+}
+th:nth-child(2), td:nth-child(2) {
+    width: 40%; /* 1:2:1 비율 중 2 */
+    
+}
+th:nth-child(3), td:nth-child(3) {
+    width: 30%; /* 1:2:1 비율 중 1 */
+    text-align: center;
+}
+.row:nth-child(even){
+    background-color:#d1d8e0 ;
+}
+.dropdown_list{
+    padding-top: 20px;
+}
+.list{
+    width: 120px;
+    height: 28px;
+}
+.search{
+    float: right;
+    padding-bottom: 20px;
+}
+.selected-filters a{
+    margin-right: 10px;
+    display: inline-block;
+}
